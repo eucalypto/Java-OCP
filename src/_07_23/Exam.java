@@ -29,23 +29,3 @@ public class Exam {
 
     }
 }
-
-
-
-
-
-abstract class Question {
-    int points;
-}
-
-class MultipleChoiceQuestion extends Question {
-}
-
-
-
-
-
-
-class ExamTaker {
-    int points;
-}

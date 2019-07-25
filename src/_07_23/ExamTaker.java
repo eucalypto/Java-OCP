@@ -1,0 +1,3 @@
+class ExamTaker {
+    int points;
+}
