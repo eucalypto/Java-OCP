@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-OCP.iml" filepath="$PROJECT_DIR$/.idea/Java-OCP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/daily/daily.iml" filepath="$PROJECT_DIR$/daily/daily.iml" />
     </modules>
   </component>
 </project>
