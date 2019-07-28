@@ -4,41 +4,48 @@
 package _07_23;
 
 import Prog1Tools.IOTools;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Exam {
-    List questions = new ArrayList<Question>();
-    List examTakers = new ArrayList<ExamTaker>();
+    public static final String MULTIPLE_CHOICE_QUESTION = "MultipleChoiceQuestion";
+    private List questions = new ArrayList<Question>();
+    private List examTakers = new ArrayList<ExamTaker>();
 
-    void setUpQuestionnaire() {
+    private void setUpQuestionnaire() {
         System.out.println("Teacher, Please Set up the Questions.");
 
-//        while (true) {
-//            Question question;
-//            String questionType = IOTools.readString("Which kind of question do you want? (type 'quit' or 'q' to stop the set-up): ");
-//
-//            if ( questionType.equals("quit") || questionType.equals("q") )
-//                break;
-//
-//            if (questionType.equals("MultipleChoiceQuestion") ) {
-//                question = MultipleChoiceQuestion.fromCommandLine();
-//            } else if (questionType.equals("YesNoQuestion")) {
-////                question = YesNoQuestion.fromCommandLine();
-//            } else {
-//                System.out.println("We're sorry. The question type '" + questionType + "' doesn't exist.");
-//            }
-//
-//            questions.add(question);
-//        }
+        while (true) {
+            String questionType = IOTools.readString("Which kind of question do you want? (type 'quit' or 'q' to stop the set-up): ");
+
+            getQuestion(questionType).ifPresent(question -> questions.add(question));
+        }
+
 
     }
 
-    void executeExam(){
+    private Optional<Question> getQuestion(String questionType) {
+        switch (questionType) {
+            case "quit":
+            case "q":
+                return Optional.empty();
+            case MULTIPLE_CHOICE_QUESTION:
+                return Optional.of(MultipleChoiceQuestion.fromCommandLine());
+            case "YesNoQuestion":
+                return Optional.of(YesNoQuestion.fromCommandLine());
+            default:
+                System.out.println("We're sorry. The question type '" + questionType + "' doesn't exist.");
+                return Optional.empty();
+        }
+    }
+
+    private void executeExam() {
 
     }
 
-    void evaluation(){
+    private void evaluation() {
 
     }
 
