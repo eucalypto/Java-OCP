@@ -5,7 +5,7 @@ import java.util.*;
 abstract class Question {
     private int points;
     private String text;
-    private Array<String> answers = new ArrayList<>();
+    private List<String> answers = new ArrayList<>();
     private int correctAnswer;
 
     public Question(int points, String text) {

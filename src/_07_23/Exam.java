@@ -3,8 +3,9 @@
 
 package _07_23;
 
-import java.util.*;
 import Prog1Tools.IOTools;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exam {
     List questions = new ArrayList<Question>();
@@ -13,23 +14,23 @@ public class Exam {
     void setUpQuestionnaire() {
         System.out.println("Teacher, Please Set up the Questions.");
 
-        while (true) {
-            Question question;
-            String questionType = IOTools.readString("Which kind of question do you want? (type 'quit' or 'q' to stop the set-up): ");
-
-            if ( questionType.equals("quit") || questionType.equals("q") )
-                break;
-
-            if (questionType.equals("MultipleChoiceQuestion") ) {
-                question = MultipleChoiceQuestion.fromCommandLine();
-            } else if (questionType.equals("YesNoQuestion")) {
-                question = YesNoQuestion.fromCommandLine();
-            } else {
-                System.out.println("We're sorry. The question type '" + questionType + "' doesn't exist.");
-            }
-
-            questions.add(question);
-        }
+//        while (true) {
+//            Question question;
+//            String questionType = IOTools.readString("Which kind of question do you want? (type 'quit' or 'q' to stop the set-up): ");
+//
+//            if ( questionType.equals("quit") || questionType.equals("q") )
+//                break;
+//
+//            if (questionType.equals("MultipleChoiceQuestion") ) {
+//                question = MultipleChoiceQuestion.fromCommandLine();
+//            } else if (questionType.equals("YesNoQuestion")) {
+////                question = YesNoQuestion.fromCommandLine();
+//            } else {
+//                System.out.println("We're sorry. The question type '" + questionType + "' doesn't exist.");
+//            }
+//
+//            questions.add(question);
+//        }
 
     }
 
