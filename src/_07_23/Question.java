@@ -1,6 +1,7 @@
 package _07_23;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 abstract class Question {
     private int points;
@@ -8,7 +9,7 @@ abstract class Question {
     private List<String> answers = new ArrayList<>();
     private int correctAnswer;
 
-    public Question(int points, String text) {
+    Question(int points, String text) {
         this.points = points;
         this.text = text;
     }

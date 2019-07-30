@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class Exam {
-    public static final String MULTIPLE_CHOICE_QUESTION = "MultipleChoiceQuestion";
     private List questions = new ArrayList<Question>();
     private List examTakers = new ArrayList<ExamTaker>();
 
@@ -31,7 +30,7 @@ public class Exam {
             case "quit":
             case "q":
                 return Optional.empty();
-            case MULTIPLE_CHOICE_QUESTION:
+            case "MultipleChoiceQuestion":
                 return Optional.of(MultipleChoiceQuestion.fromCommandLine());
             case "YesNoQuestion":
                 return Optional.of(YesNoQuestion.fromCommandLine());
