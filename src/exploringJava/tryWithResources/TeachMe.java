@@ -1,4 +1,4 @@
-package exceptions.tryWithResources;
+package exploringJava.tryWithResources;
 
 public class TeachMe {
     public static void main(String[] args) {
