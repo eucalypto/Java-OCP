@@ -10,12 +10,12 @@ import java.util.List;
 
 public class DateHelper {
     public static void main(String[] args) {
-       // birthday();
-       // lastSaturdayTester();
-       // getLengthsOfMonthsTester();
-       // getSundaysOfMonthTester();
-       isFridayThe13thTester();
-
+        // birthday();
+        // lastSaturdayTester();
+        // getLengthsOfMonthsTester();
+        // getSundaysOfMonthTester();
+        // isFridayThe13thTester();
+        getAllFirstSaturdaysOfThisYear();
     }
 
     private static void birthday() {
@@ -92,5 +92,28 @@ public class DateHelper {
     public static boolean isFridayThe13th(LocalDate day) {
         if (day.getDayOfWeek() == DayOfWeek.FRIDAY && day.getDayOfMonth() == 13) return true;
         else return false;
+    }
+
+
+
+
+    public static void getAllFirstSaturdaysOfThisYear() {
+        LocalDate firstOfThisYear = LocalDate.now().withDayOfYear(1);
+
+        for (Month month : Month.values()) {
+            LocalDate firstOfTheMonth = firstOfThisYear.withMonth(month.getValue());
+            System.out.println("The first saturday of " + month + " is " + getFirstDayOfMonth(DayOfWeek.SATURDAY, firstOfTheMonth));
+        }
+
+
+    }
+    public static LocalDate getFirstDayOfMonth(DayOfWeek weekday, LocalDate firstOfMonth) {
+        LocalDate tmpdate = firstOfMonth;
+        for (int i = 0; i < 7; i++) {
+            if (tmpdate.getDayOfWeek() == weekday) return tmpdate;
+            tmpdate = tmpdate.plusDays(1);
+        }
+        assert (false) : "This code should never be reached";
+        return null;
     }
 }
