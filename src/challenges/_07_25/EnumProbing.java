@@ -1,4 +1,4 @@
-package _07_25;
+package challenges._07_25;
 
 // This example looks when the constructor of an enum is executed
 

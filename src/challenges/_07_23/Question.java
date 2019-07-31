@@ -1,4 +1,4 @@
-package _07_23;
+package challenges._07_23;
 
 import java.util.ArrayList;
 import java.util.List;

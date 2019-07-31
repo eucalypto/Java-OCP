@@ -1,4 +1,4 @@
-package _07_23;
+package challenges._07_23;
 
 import Prog1Tools.IOTools;
 

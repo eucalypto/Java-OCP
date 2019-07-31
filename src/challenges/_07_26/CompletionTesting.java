@@ -1,4 +1,4 @@
-package _07_26;
+package challenges._07_26;
 
 import java.util.*;
 
