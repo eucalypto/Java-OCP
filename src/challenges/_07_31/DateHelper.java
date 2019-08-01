@@ -109,7 +109,7 @@ public class DateHelper {
     }
     public static LocalDate getFirstDayOfMonth(DayOfWeek weekday, LocalDate firstOfMonth) {
         LocalDate tmpdate = firstOfMonth;
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 7; i++) { // Go through first 7 days of the month
             if (tmpdate.getDayOfWeek() == weekday) return tmpdate;
             tmpdate = tmpdate.plusDays(1);
         }
