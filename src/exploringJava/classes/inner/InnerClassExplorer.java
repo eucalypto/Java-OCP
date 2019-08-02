@@ -24,14 +24,33 @@ class Outer {
         System.out.println("Beware, this is Outer class, I have been born.");
     }
 
+    void makeNoise() {
+        System.out.println("This is Outer, making noise.");
+    }
+
     class Inner {
         Inner() {
             System.out.println("Beware, this is inner class. I have been born.");
+            makeNoise();
+            Outer.this.makeNoise();
+        }
+
+        void makeNoise() {
+            System.out.println("This is Inner making noise.");
         }
 
         class InnerInner {
             InnerInner() {
                 System.out.println("Why stop here? This is InnerInner class!");
+                makeNoise();
+                Outer.this.makeNoise();
+                Inner.this.makeNoise();
+                Outer.Inner.this.makeNoise();
+                this.makeNoise();
+            }
+
+            void makeNoise() {
+                System.out.println("This is InnerInner making noise");
             }
         }
     }
