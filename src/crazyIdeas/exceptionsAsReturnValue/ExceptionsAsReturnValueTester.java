@@ -12,7 +12,7 @@ public class ExceptionsAsReturnValueTester {
         try {
             sneaky.doSomethingBoring("Is this working?");
         } catch (RuntimeException e) { // This code doesn't know SneakyRuntimeExceptions, so we have to catch RuntimeExceptions
-            e.get
+            // e.get
         }
 
 
