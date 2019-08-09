@@ -5,17 +5,18 @@ package challenges._07_31;
  */
 
 import java.time.*;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DateHelper {
     public static void main(String[] args) {
         // birthday();
-        // lastSaturdayTester();
+        lastSaturdayTester();
         // getLengthsOfMonthsTester();
         // getSundaysOfMonthTester();
         // isFridayThe13thTester();
-        getAllFirstSaturdaysOfThisYear();
+        // getAllFirstSaturdaysOfThisYear();
     }
 
     private static void birthday() {
@@ -26,8 +27,9 @@ public class DateHelper {
 
 
     public static void lastSaturdayTester() {
-        LocalDate today = LocalDate.now();
-        LocalDate lastsaturday = lastSaturday(today);
+        // LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.of(2019, 8, 10);
+        LocalDate lastsaturday = lastSaturday2(today);
         System.out.println("Today is " + today + " and last Saturday was the " + lastsaturday);
     }
 
@@ -38,9 +40,16 @@ public class DateHelper {
             returnDate = returnDate.minusDays(1);
         }
 
-        assert (returnDate.getDayOfWeek() == DayOfWeek.SATURDAY) : "The return day should be Saturday";
+        assert (returnDate.getDayOfWeek() == DayOfWeek.SATURDAY
+                && !returnDate.equals(currentDate)) : "The return day should be Saturday";
         return returnDate;
     }
+
+    public static LocalDate lastSaturday2(LocalDate currentDate) {
+        // return currentDate.with(TemporalAdjusters.previous(DayOfWeek.SATURDAY));
+        return currentDate.with(TemporalAdjusters.lastDayOfMonth());
+    }
+
 
 
     public static ZonedDateTime zoneIDToZonedDatetime(ZoneId zoneid) {
