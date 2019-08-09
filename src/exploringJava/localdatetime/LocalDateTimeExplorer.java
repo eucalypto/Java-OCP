@@ -1,9 +1,7 @@
 package exploringJava.localdatetime;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.temporal.TemporalField;
 
 public class LocalDateTimeExplorer {
     public static void main(String[] args) {
@@ -38,6 +36,9 @@ public class LocalDateTimeExplorer {
         System.out.println(now);
         System.out.println(now.equals(ltime));
         System.out.println(now.getNano());
+        System.out.println(now.getMinute());
+        System.out.println(now.getHour());
+        System.out.println(now.getSecond());
 
     }
 
