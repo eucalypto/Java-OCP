@@ -12,5 +12,12 @@ public class AutoBoxing {
 
         // short by;
         long by = new Integer(4);
+
+
+        Integer int1 = new Integer("132");
+        Boolean boo1 = new Boolean("true");
+
+        // Character chr = new Character("c"); // Does not work!
+        Character chr = new Character('c'); // There is only one constructor that takes a char!
     }
 }
