@@ -2,7 +2,7 @@ package challenges._08_20.pre_generics.bottles;
 
 import challenges._08_20.pre_generics.liquids.Liquid;
 
-abstract class Bottle {
+public abstract class Bottle {
     private Liquid content;
     private double volume;
 
@@ -27,4 +27,8 @@ abstract class Bottle {
         System.out.println("Pour out " + content.getClass().getSimpleName() + " from bottle.");
     }
 
+    @Override
+    public String toString() {
+        return "This is " + this.getClass().getSimpleName();
+    }
 }
