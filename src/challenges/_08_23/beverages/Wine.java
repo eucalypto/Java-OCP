@@ -1,4 +1,4 @@
-package challenges._08_22.beverages;
+package challenges._08_23.beverages;
 
 public class Wine extends Beverage {
     String region;
