@@ -1,34 +1,34 @@
 package de.papara.bank;
 
 public class Address {
-    private String addrLine1;
-    private String addrLine2;
+    private String addressLine1;
+    private String addressLine2;
     private String zip;
     private String city;
 
-    public Address(String addrLine1, String addrLine2, String zip, String city) {
-        this.addrLine1 = addrLine1;
-        this.addrLine2 = addrLine2;
+    public Address(String addressLine1, String addressLine2, String zip, String city) {
+        this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
         this.zip = zip;
         this.city = city;
     }
 
     // Getters and Setters
 
-    public String getAddrLine1() {
-        return addrLine1;
+    public String getAddressLine1() {
+        return addressLine1;
     }
 
-    public void setAddrLine1(String addrLine1) {
-        this.addrLine1 = addrLine1;
+    public void setAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
     }
 
-    public String getAddrLine2() {
-        return addrLine2;
+    public String getAddressLine2() {
+        return addressLine2;
     }
 
-    public void setAddrLine2(String addrLine2) {
-        this.addrLine2 = addrLine2;
+    public void setAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
     }
 
     public String getZip() {
