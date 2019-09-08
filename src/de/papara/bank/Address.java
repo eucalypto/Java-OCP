@@ -1,4 +1,4 @@
-package bankProject;
+package de.papara.bank;
 
 public class Address {
     private String addrLine1;

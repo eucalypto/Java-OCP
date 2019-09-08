@@ -1,6 +1,6 @@
-package bankProject.test;
+package de.papara.bank.test;
 
-import bankProject.Address;
+import de.papara.bank.Address;
 import org.junit.jupiter.api.Test;
 
 class AddressTest {

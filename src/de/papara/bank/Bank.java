@@ -1,4 +1,4 @@
-package bankProject;
+package de.papara.bank;
 
 public class Bank {
     private String name;
