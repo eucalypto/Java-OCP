@@ -1,11 +1,17 @@
 package challenges._09_06.pizza;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Manager {
+    List<Pizza> orders = new ArrayList<>();
+
+
     public void takeOrder(Pizza pizza) {
         System.out.println("Taking order for " + pizza);
     }
 
-    void giveOrderToChef(Chef chef, Pizza pizza) {
+    void giveOrderToChef(Cook cook, Pizza pizza) {
 
     }
 
