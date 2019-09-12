@@ -35,5 +35,10 @@ class MyThread extends Thread {
             //     e.printStackTrace();
             // }
         }
+        try {
+            this.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
