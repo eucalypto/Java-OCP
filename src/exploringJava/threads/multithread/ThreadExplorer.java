@@ -1,4 +1,4 @@
-package exploringJava.multithread;
+package exploringJava.threads.multithread;
 
 public class ThreadExplorer {
     public static void main(String[] args) throws InterruptedException {
