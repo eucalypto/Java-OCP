@@ -8,7 +8,7 @@ public class MyFixedThreadPool {
         int cpus = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(cpus);
 
-        Runnable run = new Task();
+        Runnable run = new MyRunnable();
         executorService.execute(run);
 
         executorService.shutdown();

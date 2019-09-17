@@ -2,7 +2,7 @@ package exploringJava.threads.executors_threadpools;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Task implements Runnable {
+public class MyRunnable implements Runnable {
     @Override
     public void run() {
         System.out.println("Printing out random times by " + Thread.currentThread().getName());
