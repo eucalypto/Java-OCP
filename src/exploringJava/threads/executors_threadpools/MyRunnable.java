@@ -7,6 +7,14 @@ public class MyRunnable implements Runnable {
     public void run() {
         System.out.println("Printing out random times by " + Thread.currentThread().getName());
         int end = ThreadLocalRandom.current().nextInt(1, 11);
-        for (int i = 1; i <= end; i++) System.out.println(i + " Mississippi.");
+        for (int i = 1; i <= end; i++) {
+            System.out.println(i + " Mississippi.");
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
