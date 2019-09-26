@@ -32,18 +32,6 @@ public class PersonHandler {
 
         System.out.println("people = " + people);
 
-        /*
-        List<Person> people = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(csvfile.toFile()))) {
-            while (reader.)
-            reader.readLine();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } ;
-        */
     }
 
     private static Person personOfLine(String line) {
