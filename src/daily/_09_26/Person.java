@@ -19,6 +19,15 @@ public class Person {
         this.emailAddress = emailAddress;
     }
 
+    @Override
+    public String toString() {
+        return "{name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender=" + gender +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
+
     public int getAge() {
         return LocalDate.now().minusYears(dateOfBirth.getYear()).getYear();
     }
