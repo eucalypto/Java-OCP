@@ -19,8 +19,8 @@ public class Misc {
         // integerStream.map()
 
         List<Person> persons = new ArrayList<>();
-        persons.add(Persons.ofString("Alice; 1989-10-11;FEMALE;alice@gmail.com"));
-        persons.add(Persons.ofString("Bob; 1990-01-04;MALE;bob@bobiverse.com"));
+        persons.add(Persons.of("Alice; 1989-10-11;FEMALE;alice@gmail.com"));
+        persons.add(Persons.of("Bob; 1990-01-04;MALE;bob@bobiverse.com"));
 
         IntStream mystream = persons.stream()
                 .mapToInt(Person::getAge)

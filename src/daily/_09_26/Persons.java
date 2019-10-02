@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public abstract class Persons {
-    public static Person ofString(String line) {
+    public static Person of(String line) {
         // Go crazy with stream-fu! ^-^ :
         List<String> entriesOfLine = Arrays.stream(line.split(";"))
                 .map(String::trim)
@@ -32,7 +32,7 @@ public abstract class Persons {
 
         try (Stream<String> lines = Files.lines(Paths.get(path))) {
             personList = lines
-                    .map(Persons::ofString)
+                    .map(Persons::of)
                     .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
