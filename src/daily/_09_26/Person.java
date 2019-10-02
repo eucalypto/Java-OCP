@@ -1,8 +1,10 @@
 package daily._09_26;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private LocalDate dateOfBirth;
     private Sex gender;
@@ -62,5 +64,10 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(@NotNull Person o) {
+        return this.dateOfBirth.compareTo(o.dateOfBirth);
     }
 }

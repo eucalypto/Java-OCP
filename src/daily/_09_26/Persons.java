@@ -2,13 +2,12 @@ package daily._09_26;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public abstract class Persons {
     public static Person ofString(String line) {
@@ -29,18 +28,16 @@ public abstract class Persons {
     }
 
     public static List<Person> parseFile(String path) {
-        // Read persons from file
-        Path csvFile = Paths.get(path);
-        List<Person> people = new ArrayList<>();
-        try {
-            List<String> people_raw = Files.readAllLines(csvFile);
-            // people_raw.forEach(s -> people.add(Persons.ofString(s)));
-            // IDEA suggest instead of above line to do:
-            // people = people_raw.stream().map(Persons::ofString).collect(Collectors.toList());
-            people_raw.stream().map(Persons::ofString).forEach(people::add);
+        List<Person> personList = null;
+
+        try (Stream<String> lines = Files.lines(Paths.get(path))) {
+            personList = lines
+                    .map(Persons::ofString)
+                    .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return people;
+
+        return personList;
     }
 }
