@@ -92,7 +92,10 @@ class Average {
     }
 
     public Average add(Average other) {
-        return new Average(this.getSum() + other.getSum(), this.getCount() + other.getCount());
+        return new Average(
+                this.getSum() + other.getSum(),
+                this.getCount() + other.getCount()
+        );
     }
 
 }
